@@ -1,10 +1,8 @@
-#include "pokemon_vector.hpp"
-
-#include <algorithm>
 #include <iomanip>
 #include <iostream>
 #include <iterator>
-
+#include <algorithm>
+#include "pokemon_vector.hpp"
 #include "pokemon_not_found.hpp"
 
 std::size_t Pokemon_Vector::indexOfName(const std::string &name) const

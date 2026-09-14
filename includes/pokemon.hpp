@@ -24,22 +24,22 @@ public:
     static const double MIN_DAMAGE;
     static bool showLifeCycle;
 
+    ~Pokemon();
     Pokemon() = delete;
+    Pokemon(const Pokemon &other);
     Pokemon(int id, std::string name, double maxHitPoint, double attack,
             double defense, int generation, int evolution = 0);
-    Pokemon(const Pokemon &other);
-    ~Pokemon();
 
     std::unique_ptr<Pokemon> clone() const;
 
     int getId() const;
-    const std::string &getName() const;
-    int getEvolution() const;
-    double getMaxHitPoint() const;
-    double getCurrentHitPoint() const;
     double getAttack() const;
+    int getEvolution() const;
     double getDefense() const;
     int getGeneration() const;
+    double getMaxHitPoint() const;
+    double getCurrentHitPoint() const;
+    const std::string &getName() const;
 
     void setName(std::string name);
     void setEvolution(int evolution);

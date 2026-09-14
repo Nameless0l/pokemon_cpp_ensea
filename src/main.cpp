@@ -1,19 +1,22 @@
-#include <SFML/Graphics.hpp>
+#include <iostream>
+#include "pokedex.hpp"
+#include "game_engine.hpp"
 
-int main() {
-    sf::RenderWindow window(sf::VideoMode(800, 600), "Hello SFML");
-    sf::CircleShape shape(100.f);
-    shape.setFillColor(sf::Color::Green);
+int main()
+{
+    try
+    {
+        Pokemon::showLifeCycle = false;
 
-    while (window.isOpen()) {
-        sf::Event event{};
-        while (window.pollEvent(event)) {
-            if (event.type == sf::Event::Closed)
-                window.close();
-        }
-        window.clear();
-        window.draw(shape);
-        window.display();
+        Pokedex &pokedex = Pokedex::getInstance();
+        GameEngine engine(pokedex);
+        engine.run();
     }
+    catch (const std::exception &e)
+    {
+        std::cerr << "Erreur : " << e.what() << std::endl;
+        return 1;
+    }
+
     return 0;
 }

@@ -1,7 +1,7 @@
 #pragma once
 
-#include <stdexcept>
 #include <string>
+#include <stdexcept>
 
 // Exception dédiée, pour que l'appelant puisse rattraper ce cas précis sans intercepter toutes les autres erreurs.
 class PokemonNotFound : public std::runtime_error

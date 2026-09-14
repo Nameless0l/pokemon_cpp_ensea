@@ -1,7 +1,5 @@
-#include "pokemon_party.hpp"
-
 #include <stdexcept>
-
+#include "pokemon_party.hpp"
 #include "pokemon_not_found.hpp"
 
 void Pokemon_Party::addPokemon(const std::shared_ptr<Pokemon> &pokemon)

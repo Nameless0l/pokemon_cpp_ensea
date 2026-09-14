@@ -1,9 +1,8 @@
 #pragma once
 
-#include <cstddef>
 #include <string>
 #include <vector>
-
+#include <cstddef>
 #include "pokemon_party.hpp"
 #include "pokemon_vector.hpp"
 
@@ -23,9 +22,9 @@ public:
     std::shared_ptr<Pokemon> getPokemonByIndex(std::size_t index) override;
     std::shared_ptr<Pokemon> getPokemonByName(const std::string &name) override;
 
-    void addFromParty(std::size_t indexInParty);
-    void giveBack(std::size_t index);
     void giveBackAll();
+    void giveBack(std::size_t index);
+    void addFromParty(std::size_t indexInParty);
     void swapPositions(std::size_t first, std::size_t second);
 
     bool isFull() const;

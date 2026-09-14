@@ -1,7 +1,6 @@
 #pragma once
 
 #include <string>
-
 #include "pokemon_vector.hpp"
 
 class Pokedex : public Pokemon_Vector
@@ -17,7 +16,7 @@ public:
 
     static Pokedex &getInstance(const std::string &csvFileName = "data/pokedex.csv");
 
+    std::shared_ptr<Pokemon> peek(std::size_t index) const override;
     std::shared_ptr<Pokemon> getPokemonByIndex(std::size_t index) override;
     std::shared_ptr<Pokemon> getPokemonByName(const std::string &name) override;
-    std::shared_ptr<Pokemon> peek(std::size_t index) const override;
 };

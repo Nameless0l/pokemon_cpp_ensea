@@ -1,7 +1,5 @@
-#include "pokemon_attack.hpp"
-
 #include <stdexcept>
-
+#include "pokemon_attack.hpp"
 #include "pokemon_not_found.hpp"
 
 Pokemon_Attack::Pokemon_Attack(Pokemon_Party &party) : party(party) {}

@@ -1,10 +1,8 @@
-#include "pokedex.hpp"
-
 #include <fstream>
-#include <iostream>
 #include <sstream>
+#include <iostream>
 #include <stdexcept>
-
+#include "pokedex.hpp"
 #include "pokemon_not_found.hpp"
 
 // #,Name,Type 1,Type 2,Total,HP,Attack,Defense,Sp. Atk,Sp. Def,Speed,Generation,Legendary

@@ -1,7 +1,6 @@
-#include "pokemon.hpp"
-
 #include <iostream>
 #include <stdexcept>
+#include "pokemon.hpp"
 
 const double Pokemon::MIN_DAMAGE = 1.0;
 
