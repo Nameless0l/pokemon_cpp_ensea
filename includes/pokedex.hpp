@@ -1,5 +1,6 @@
 #pragma once
 
+#include "conf.h"
 #include <string>
 #include "pokemon_vector.hpp"
 
@@ -14,7 +15,7 @@ public:
     Pokedex(const Pokedex &other) = delete;
     Pokedex &operator=(const Pokedex &other) = delete;
 
-    static Pokedex &getInstance(const std::string &csvFileName = "data/pokedex.csv");
+    static Pokedex &getInstance(const std::string &csvFileName = POKEDEX_CSV);
 
     std::shared_ptr<Pokemon> peek(std::size_t index) const override;
     std::shared_ptr<Pokemon> getPokemonByIndex(std::size_t index) override;
