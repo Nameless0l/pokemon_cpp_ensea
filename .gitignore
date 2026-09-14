@@ -1,0 +1,12 @@
+# Produits de compilation
+bin/
+*.o
+*.d
+*.exe
+
+# Fichiers d'editeur / systeme
+.vscode/ipch/
+.cache/
+compile_commands.json
+*.swp
+.DS_Store
